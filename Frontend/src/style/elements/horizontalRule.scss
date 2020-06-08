@@ -1,0 +1,13 @@
+hr {
+	margin: 40px 0;
+
+	border: 0.5px solid $color-horizontal-rule;
+
+	@include size(medium) {
+		margin: 48px 0;
+	}
+
+	@include size(large) {
+		margin: 64px 0;
+	}
+}

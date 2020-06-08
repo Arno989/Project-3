@@ -1,0 +1,12 @@
+.c-thankyou {
+	display: flex;
+	justify-content: center;
+
+	&__icon {
+		width: 48px;
+		height: 48px;
+		margin-top: 8px;
+
+		fill: map-get($colors-thankyou, 'icon');
+	}
+}

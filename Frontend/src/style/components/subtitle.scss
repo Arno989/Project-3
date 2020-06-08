@@ -1,0 +1,9 @@
+.c-subtitle {
+	font-size: 1.15rem;
+
+	color: map-get($colors-text, 'subtitle');
+
+	&--large {
+		font-size: 1.3rem;
+	}
+}

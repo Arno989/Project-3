@@ -1,0 +1,19 @@
+.c-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px;
+
+	font-size: 0.86rem;
+
+	color: map-get($colors-footer, 'text');
+	background-color: map-get($colors-footer, 'background');
+
+	@include size(large) {
+		padding: 24px 180px;
+	}
+
+	&__logo {
+		height: 24px;
+	}
+}

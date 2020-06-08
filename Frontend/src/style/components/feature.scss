@@ -1,0 +1,61 @@
+.c-features {
+	& + & {
+		margin-top: 24px;
+
+		@include size(large) {
+			margin-top: 64px;
+		}
+	}
+
+	@include size(large) {
+		width: 100%;
+		display: grid;
+		column-gap: 64px;
+		row-gap: 64px;
+		align-items: center;
+		justify-items: center;
+
+		&--2 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&--3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+.c-feature {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include size(small) {
+		margin: 0 10%;
+	}
+
+	@include size(large) {
+		margin: 0;
+	}
+
+	&__icon {
+		width: 48px;
+		height: 48px;
+		margin-bottom: 4px;
+
+		fill: map-get($colors-main, 'dark');
+	}
+
+	&__title,
+	&__description {
+		margin: 0;
+	}
+
+	& + & {
+		margin-top: 24px;
+
+		@include size(large) {
+			margin-top: 0;
+		}
+	}
+}
