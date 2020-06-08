@@ -1,0 +1,88 @@
+.c-cards {
+	@include size(large) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.c-card {
+		@include size(large) {
+			max-width: 40%;
+			display: block;
+		}
+	}
+}
+
+.c-card {
+	margin-top: 16px;
+	padding: 16px;
+	border: 0.5px solid map-get($colors-card, 'border');
+	border-radius: 8px;
+
+	background-color: map-get($colors-card, 'background');
+	box-shadow: map-get($shadows-card, 'card');
+
+	@include size(large) {
+		padding: 24px;
+	}
+
+	&--large {
+		@include size(small) {
+			padding: 24px 128px;
+		}
+
+		@include size(large) {
+			padding: 24px 164px;
+		}
+
+		@include size(xlarge) {
+			padding: 24px 300px;
+		}
+	}
+
+	&-picture {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 16px;
+
+		@include size(large) {
+			margin-bottom: 24px;
+		}
+
+		&__image {
+			width: 168px;
+			border: none;
+			border-radius: 50%;
+
+			box-shadow: map-get($shadows-card, 'image');
+
+			&--large {
+				width: 100%;
+				border-radius: 8px;
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 8px;
+
+		&--large {
+			margin-top: 24px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		padding: 0;
+
+		list-style-type: none;
+	}
+
+	& + & {
+		margin-top: 24px;
+
+		@include size(large) {
+			margin-top: 16px;
+		}
+	}
+}
