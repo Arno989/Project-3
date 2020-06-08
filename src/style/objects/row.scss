@@ -1,0 +1,11 @@
+.o-row {
+	padding: 24px;
+
+	@include size(medium) {
+		padding: 48px 240px;
+	}
+
+	@include size(large) {
+		padding: 64px 360px;
+	}
+}
