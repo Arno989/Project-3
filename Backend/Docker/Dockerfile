@@ -1,15 +1,28 @@
-FROM python:3.7-alpine
+FROM python:3.8 as build-image
 
-WORKDIR '/app'
+WORKDIR '/api'
 
-RUN apk add --no-cache linux-headers g++
+COPY ./requirements.txt ./
 
-RUN pip install -r requirements.txt
+RUN pip wheel --wheel-dir=/root/wheels -r requirements.txt
+
+
+
+
+FROM python:3.8 as production-image
+
+WORKDIR '/api'
+
+COPY --from=build-image /root/wheels /root/wheels
+
+COPY --from=build-image /api/requirements.txt ./
+
+RUN pip install --no-index --find-links=/root/wheels -r requirements.txt
 
 COPY ./ ./
 
-RUN addgroup -S uwsgi && adduser -S uwsgi -G uwsgi
+RUN useradd -c 'uwsgi user,,,' -d /nonexistent -s /bin/false uwsgi
 
 USER uwsgi
 
-CMD ["uwsgi", "--ini", "app.ini"]
+# CMD ["uwsgi", "--ini", "app.ini"]
