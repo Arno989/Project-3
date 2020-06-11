@@ -25,4 +25,4 @@ RUN useradd -c 'uwsgi user,,,' -d /nonexistent -s /bin/false uwsgi
 
 USER uwsgi
 
-# CMD ["uwsgi", "--ini", "app.ini"]
+CMD ["uwsgi", "--ini", "app.ini"]
