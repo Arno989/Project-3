@@ -1,22 +1,28 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
-from BackendPy import PrepJson
-from BackendPy import model
+import PrepJson
+import model
 
 app = Flask(__name__)
 endpoint = '/api/v1'
 
+def process_request(content):
+    settings = content.get("settings", {})
+    years = settings.get("years", 15)
+    content = content.get("data")
+    data = PrepJson.prep_json(content)
+    result = model.get_forecast(data, years)
+    return result
 
-@app.route(endpoint + '/user', methods=['GET', 'POST'])
+@app.route(endpoint + '/forecast', methods=['GET', 'POST'])
 def get_forecast():
     content = request.get_json()
     print("content", content)
     try:
-        data = PrepJson.prep_json(content)
-        a = model.get_forecast(data)
-        return jsonify(a),200
-    except Exception:
+        result = process_request(content)
+        return jsonify(result),200
+    except Exception as e:
         return ('Something went wrong processing the request'),400
 
 
