@@ -1,0 +1,6 @@
+version: '3.8'
+services:
+  api:
+    build: ./api
+    ports:
+      - 8000:5000 # set to 5000:5000
