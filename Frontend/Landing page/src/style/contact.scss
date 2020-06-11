@@ -1,0 +1,31 @@
+//settings
+@import './settings/colors.scss';
+@import './settings/mediaQueries.scss';
+@import './settings/shadows.scss';
+
+//tools
+@import './tools/noSelect.scss';
+
+//generic
+@import './generic/normalize.scss';
+
+//elements
+@import './elements/headings.scss';
+@import './elements/page.scss';
+@import './elements/selection.scss';
+
+//objects
+@import './objects/container.scss';
+@import './objects/row.scss';
+
+//components
+@import './components/button.scss';
+@import './components/checkbox.scss';
+@import './components/footer.scss';
+@import './components/form.scss';
+@import './components/input.scss';
+@import './components/intro.scss';
+@import './components/label.scss';
+@import './components/main.scss';
+@import './components/nav.scss';
+@import './components/textArea.scss';
