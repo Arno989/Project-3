@@ -15,7 +15,7 @@ def process_request(content):
     result = model.get_forecast(data, years)
     return result
 
-@app.route(endpoint + '/forecast', methods=['GET', 'POST'])
+@app.route(endpoint + '/forcast', methods=['GET', 'POST'])
 def get_forecast():
     content = request.get_json()
     print("content", content)
