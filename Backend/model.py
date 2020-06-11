@@ -1,23 +1,15 @@
 import numpy as np
 import pandas as pd
-import seaborn as sns
-from scipy import stats
-from scipy.stats import randint, uniform
-from sklearn import linear_model, preprocessing
-from sklearn.decomposition import PCA
+
 from sklearn.ensemble import (RandomForestRegressor)
-from sklearn.linear_model import Lasso, LogisticRegression, Ridge
-from sklearn.metrics import (r2_score)
-from sklearn.model_selection import (GridSearchCV, RandomizedSearchCV,
-                                     train_test_split)
-from sklearn.preprocessing import (LabelEncoder, MinMaxScaler, OneHotEncoder,
-                                   PolynomialFeatures, RobustScaler,
-                                   StandardScaler)
+
+from sklearn.model_selection import (train_test_split)
+
 
 pd.set_option('display.max_rows',1000)
 pd.set_option('display.max_columns',1000)
 
-dataset = pd.read_csv('ML/Data/Measurements-Transformed')
+dataset = pd.read_csv('Data/Measurements-Transformed')
 
 for coll in dataset.columns:
     coll = np.nan_to_num(coll)
