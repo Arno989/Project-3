@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../../Advanced_programming/project/AdvMathProg---project-2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Advanced_programming/project/AdvMathProg---project-2020/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Advanced_programming/project/AdvMathProg---project-2020/data/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Advanced_programming/project/AdvMathProg---project-2020/data/logging.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Advanced_programming/project/AdvMathProg---project-2020/data/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Advanced_programming/project/AdvMathProg---project-2020/data/users.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackendPy/.gitignore" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +19,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackendPy/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -32,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BackendPy/app.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -360,16 +359,15 @@
       <workItem from="1591358000514" duration="18102000" />
       <workItem from="1591698235953" duration="6310000" />
       <workItem from="1591712646766" duration="5134000" />
-      <workItem from="1591792421036" duration="4206000" />
+      <workItem from="1591792421036" duration="4484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33752000" />
+    <option name="totallyTimeSpent" value="34030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
