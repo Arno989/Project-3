@@ -1,0 +1,29 @@
+{
+	"name": "project3frontend",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"start": "npx parcel-bundler src/*.* --no-cache --no-hmr -p 8865",
+		"build": "npx -p parcel-bundler parcel build src/*.*",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DeVlaminckDuncan/project3frontend.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/DeVlaminckDuncan/project3frontend/issues"
+	},
+	"homepage": "https://github.com/DeVlaminckDuncan/project3frontend#readme",
+	"devDependencies": {
+		"cssnano": "^4.1.10",
+		"sass": "^1.26.5"
+	},
+	"dependencies": {
+		"core-js": "^3.6.5",
+		"regenerator-runtime": "^0.13.5"
+	}
+}
