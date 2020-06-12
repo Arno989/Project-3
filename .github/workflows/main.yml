@@ -50,9 +50,9 @@ jobs:
         # Automatically tags the built image with the git short SHA as per the readme
         tag_with_sha: # optional
         # Path to the build context
-        path: # './Backend/Docker/'
+        path: './Backend/Docker/'
         # Path to the Dockerfile (Default is '{path}/Dockerfile')
-        dockerfile: './Backend/Docker'
+        dockerfile: './Backend/Docker/api/'
         # Sets the target stage to build
         target: # optional
         # Always attempt to pull a newer version of the image
