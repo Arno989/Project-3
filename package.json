@@ -1,5 +1,5 @@
 {
-	"name": "project3frontend",
+	"name": "project3frontend2",
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
@@ -9,15 +9,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/DeVlaminckDuncan/project3frontend.git"
+		"url": "git+https://github.com/DeVlaminckDuncan/project3frontend2.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/DeVlaminckDuncan/project3frontend/issues"
+		"url": "https://github.com/DeVlaminckDuncan/project3frontend2/issues"
 	},
-	"homepage": "https://github.com/DeVlaminckDuncan/project3frontend#readme",
+	"homepage": "https://github.com/DeVlaminckDuncan/project3frontend2#readme",
 	"devDependencies": {
 		"cssnano": "^4.1.10",
 		"sass": "^1.26.8"

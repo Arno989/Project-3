@@ -54,7 +54,8 @@ $colors-button: (
 	'border': #ffffff,
 	'background': map-get($colors-main, 'regular'),
 	'hover-primary': #b060ad,
-	'hover-secondary': #b060ad,
+	'hover-secondary': #fbfbfb,
+	'border-secondary': #c0c0c0,
 );
 
 $colors-footer: (

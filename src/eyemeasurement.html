@@ -13,7 +13,7 @@
 		<link rel="manifest" href="./site.webmanifest" />
 		<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#a548a4" />
 
-		<title>Contact us | CRMoptics - Software for the optics</title>
+		<title>New eye measurement | CRMoptics - Software for the optics</title>
 
 		<script defer src="./script/eyeMeasurement.js"></script>
 	</head>
@@ -53,45 +53,26 @@
 			</div>
 		</nav>
 
-		<header class="c-intro o-row">
-			<h1>Need more information?</h1>
-			<h2>
-				Fill in the form below to contact us.
-			</h2>
-		</header>
-
 		<main class="c-main o-row">
 			<div class="o-container">
 				<form class="c-form js-form">
-					<div class="c-form-field">
-						<label class="c-label c-label--floating js-label" for="name">Name</label>
-						<input class="c-input js-input" type="text" name="name" id="name" required />
-					</div>
-
-					<div class="c-form-field">
-						<label class="c-label c-label--floating js-label" for="email">Email address</label>
-						<input class="c-input js-input" type="email" name="email" id="email" required />
-					</div>
-
-					<div class="c-form-field">
-						<label class="c-label c-label--floating js-label" for="phone">Phone number</label>
-						<input class="c-input js-input" type="tel" name="phone" id="phone" required />
-					</div>
-
-					<div class="c-form-field">
-						<label class="c-label c-label--floating js-label" for="message">Your message</label>
-						<textarea class="c-input c-textarea js-input" name="message" id="message" rows="10" required></textarea>
-					</div>
-
-					<div class="c-form-field">
-						<div class="c-checkbox-container">
-							<input class="c-checkbox__input js-checkbox" type="checkbox" name="appointment" id="appointment" />
-							<label class="c-checkbox__label" for="appointment">I would like to make an appointment</label>
+					<div class="c-buttons">
+						<div class="c-button c-button--primary" id="send">
+							<input type="submit" class="o-button-reset c-button__link c-button__link--initial-width" value="Opslaan" />
+						</div>
+						<div class="c-button c-button--secondary" id="send">
+							<a class="c-button__link c-button__link--initial-width" href="./index.html">Annuleren</a>
 						</div>
 					</div>
 
-					<div class="c-button c-button--secondary" id="send">
-						<input type="submit" class="o-button-reset c-button__link" value="Send" />
+					<div class="c-form-field">
+						<label class="c-label c-label--floating js-label" for="dateOfBirth">Geboortedatum</label>
+						<input class="c-input js-input" type="text" name="dateOfBirth" id="dateOfBirth" required />
+					</div>
+
+					<div class="c-form-field">
+						<label class="c-label c-label--floating js-label" for="gender">Geslacht</label>
+						<input class="c-input js-input" type="text" name="gender" id="gender" required />
 					</div>
 				</form>
 			</div>
