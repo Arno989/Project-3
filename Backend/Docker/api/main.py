@@ -1,8 +1,8 @@
 from flask import Flask
 from flask import jsonify
 from flask import request
-import PrepJson
-import model
+from Backend.Docker.api import PrepJson
+from Backend.Docker.api import model
 
 app = Flask(__name__)
 endpoint = '/api/v1'
