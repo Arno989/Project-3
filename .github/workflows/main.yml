@@ -52,7 +52,7 @@ jobs:
         # Path to the build context
         path: './Backend/Docker/'
         # Path to the Dockerfile (Default is '{path}/Dockerfile')
-        dockerfile: './Backend/Docker/api/'
+        dockerfile: './Backend/Docker/api/Dockerfile'
         # Sets the target stage to build
         target: # optional
         # Always attempt to pull a newer version of the image
