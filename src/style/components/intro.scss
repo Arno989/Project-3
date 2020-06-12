@@ -1,0 +1,61 @@
+.c-intro {
+	margin-top: 4.1rem;
+
+	background-color: map-get($colors-main, 'regular');
+
+	&-picture {
+		display: flex;
+		justify-content: center;
+
+		&__image {
+			width: 92vw;
+
+			border: 4px solid #ffffff;
+			border-radius: 12px;
+
+			box-shadow: map-get($shadows-main, 'image');
+
+			@include size(small) {
+				width: 80vw;
+			}
+
+			@include size(medium) {
+				width: 68vw;
+			}
+
+			@include size(large) {
+				width: 44vw;
+			}
+
+			&--small {
+				width: 64vw;
+
+				@include size(small) {
+					width: 52vw;
+				}
+
+				@include size(medium) {
+					width: 44vw;
+				}
+
+				@include size(large) {
+					width: 30vw;
+				}
+			}
+		}
+	}
+
+	&-text {
+		margin-top: 24px;
+		margin-bottom: 0;
+
+		font-size: 1.2rem;
+		text-align: center;
+
+		color: map-get($colors-text, 'light');
+
+		@include size(large) {
+			margin-top: 32px;
+		}
+	}
+}

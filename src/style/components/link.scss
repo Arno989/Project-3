@@ -1,0 +1,8 @@
+.c-link {
+	text-decoration: none;
+
+	&,
+	&:visited {
+		color: map-get($colors-text, 'link');
+	}
+}
