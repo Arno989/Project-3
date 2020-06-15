@@ -55,24 +55,134 @@
 
 		<main class="c-main o-row">
 			<div class="o-container">
-				<form class="c-form js-form">
-					<div class="c-buttons">
-						<div class="c-button c-button--primary" id="send">
-							<input type="submit" class="o-button-reset c-button__link c-button__link--initial-width" value="Opslaan" />
+				<form class="c-form c-eyemeasurement__form js-form">
+					<div class="c-eyemeasurement">
+						<div class="c-eyemeasurement__buttons-container">
+							<div class="c-eyemeasurement__buttons">
+								<div class="c-button c-button--primary c-eyemeasurement__button" id="send">
+									<input type="submit" class="o-button-reset c-button__link c-button__link--initial-width" value="Opslaan" />
+								</div>
+								<div class="c-button c-button--secondary c-eyemeasurement__button" id="send">
+									<a class="c-button__link c-button__link--initial-width" href="./index.html">Annuleren</a>
+								</div>
+							</div>
 						</div>
-						<div class="c-button c-button--secondary" id="send">
-							<a class="c-button__link c-button__link--initial-width" href="./index.html">Annuleren</a>
+
+						<div>
+							<div class="c-form-field c-eyemeasurement__form-field">
+								<label class="c-label js-label" for="dateOfBirth">Geboortedatum</label>
+								<input class="c-input js-input" type="date" name="Geboortedatum" id="dateOfBirth" required />
+							</div>
+
+							<div class="c-form-field c-eyemeasurement__form-field">
+								<select class="c-select js-input" name="Geslacht" id="gender" required>
+									<option value="" disabled selected hidden>Geslacht</option>
+									<option value="Man">Man</option>
+									<option value="Vrouw">Vrouw</option>
+									<option value="Overige">Overige</option>
+								</select>
+							</div>
 						</div>
-					</div>
 
-					<div class="c-form-field">
-						<label class="c-label c-label--floating js-label" for="dateOfBirth">Geboortedatum</label>
-						<input class="c-input js-input" type="text" name="dateOfBirth" id="dateOfBirth" required />
-					</div>
+						<div>
+							<p class="c-subtitle">Rechteroog</p>
 
-					<div class="c-form-field">
-						<label class="c-label c-label--floating js-label" for="gender">Geslacht</label>
-						<input class="c-input js-input" type="text" name="gender" id="gender" required />
+							<table>
+								<tr>
+									<td>&nbsp;</td>
+									<th>Sfr</td>
+									<th>Cyl</td>
+									<th>As</td>
+								</tr>
+
+								<tr>
+									<th>Ver</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Sfr ver/L" id="sfrVerL" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Cyl ver/L" id="cylVerL" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/As ver/L" id="asVerL" type="text" value="0" />
+									</td>
+								</tr>
+
+								<tr>
+									<th>Add</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Add/L" id="addL" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>M. Add</td>
+									<td>
+										<input class="c-input js-input"  type="number" value="0.00" step="0.25" />
+									</td>
+								</tr>
+
+								<tr>
+									<th>Dicht</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Sfr dicht/L" id="sfrDichtL" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Cyl dicht/L" id="cylDichtL" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/As dicht/L" id="asDichtL" type="text" value="0" />
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div>
+							<p class="c-subtitle">Linkeroog</p>
+
+							<table>
+								<tr>
+									<td>&nbsp;</td>
+									<th>Sfr</td>
+									<th>Cyl</td>
+									<th>As</td>
+								</tr>
+
+								<tr>
+									<th>Ver</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Sfr ver" id="sfrVer" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Cyl ver" id="cylVer" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/As ver" id="asVer" type="text" value="0" />
+									</td>
+								</tr>
+
+								<tr>
+									<th>Add</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Add" id="add" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>M. Add</td>
+									<td>
+										<input class="c-input js-input" type="number" value="0.00" step="0.25" />
+									</td>
+								</tr>
+
+								<tr>
+									<th>Dicht</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Sfr dicht" id="sfrDicht" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/Cyl dicht" id="cylDicht" type="number" value="0.00" step="0.25" />
+									</td>
+									<td>
+										<input class="c-input js-input" name="Oogmetingen/As dicht" id="asDicht" type="text" value="0" />
+									</td>
+								</tr>
+							</table>
+						</div>
 					</div>
 				</form>
 			</div>

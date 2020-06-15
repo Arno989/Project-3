@@ -15,12 +15,20 @@
 
 		@include size(medium) {
 			flex-direction: row-reverse;
-			justify-content: space-evenly;
+			justify-content: space-between;
+			margin: 0 240px;
 		}
 
 		@include size(large) {
 			flex-direction: row-reverse;
-			justify-content: space-evenly;
+			justify-content: space-between;
+			margin: 0 240px;
+		}
+
+		@include size(xlarge) {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			margin: 0 360px;
 		}
 	}
 

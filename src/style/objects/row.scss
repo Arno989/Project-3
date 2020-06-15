@@ -6,6 +6,10 @@
 	}
 
 	@include size(large) {
+		padding: 64px 240px;
+	}
+
+	@include size(xlarge) {
 		padding: 64px 360px;
 	}
 }

@@ -47,6 +47,7 @@ $colors-form: (
 	'input-hover-border': #777777,
 	'input-focus-border': map-get($colors-main, 'regular'),
 	'input-focus-shadow': map-get($colors-main, 'shadow'),
+	'select-arrow': #707070,
 );
 
 $colors-button: (
