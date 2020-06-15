@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    # - uses: actions/checkout@v2
 
         
     # - name: Docker Login
@@ -42,7 +42,7 @@ jobs:
         # Server address of Docker registry. If not set then will default to Docker Hub
         registry: crmoptics.azurecr.io
         # Docker repository to tag the image with
-        repository: crmoptics
+        repository: crmapi
         # Comma-delimited list of tags. These will be added to the registry/repository to form the image's tags
         tags: dev
         # Automatically tags the built image with the git reference as per the readme
