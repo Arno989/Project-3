@@ -3,4 +3,4 @@ services:
   api:
     build: ./api
     ports:
-      - 80:5000 # set to 8000:5000 for win, 5000:5000 for azure
+      - 5000:5000 # set to 8000:5000 for win, 5000:5000 for azure

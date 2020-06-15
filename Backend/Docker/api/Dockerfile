@@ -2,7 +2,7 @@ FROM python:3.8 as build-image
 
 WORKDIR '/api'
 
-COPY ./api/requirements.txt ./
+COPY ./requirements.txt ./
 
 RUN pip wheel --wheel-dir=/root/wheels -r requirements.txt
 
