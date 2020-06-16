@@ -2,7 +2,7 @@ FROM python:3.8 as build-image
 
 WORKDIR '/api'
 
-COPY ./requirements.txt ./
+COPY ./api/requirements.txt ./
 
 RUN pip wheel --wheel-dir=/root/wheels -r requirements.txt
 
@@ -19,7 +19,7 @@ COPY --from=build-image /api/requirements.txt ./
 
 RUN pip install --no-index --find-links=/root/wheels -r requirements.txt
 
-COPY ./ ./
+COPY ./api/ ./
 
 RUN useradd -c 'uwsgi user,,,' -d /nonexistent -s /bin/false uwsgi
 
