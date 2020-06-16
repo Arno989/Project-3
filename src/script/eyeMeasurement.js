@@ -163,7 +163,8 @@ const calculateAge = (dateString) => {
 					},
 				};
 
-				await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
+				const result = await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
+				console.log(result);
 			},
 		});
 	});
