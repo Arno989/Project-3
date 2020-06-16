@@ -38,6 +38,7 @@
 		left: -20rem;
 
 		height: 100%;
+		min-width: 12rem;
 		padding: 4px;
 
 		background-color: map-get($colors-main, 'regular');
@@ -45,6 +46,10 @@
 
 		will-change: left;
 		transition: left 250ms ease-in;
+
+		@include size(small) {
+			min-width: 16rem;
+		}
 
 		@include size(medium) {
 			box-shadow: none;
