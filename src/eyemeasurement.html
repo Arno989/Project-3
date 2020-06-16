@@ -60,7 +60,18 @@
 						<div class="c-eyemeasurement__buttons-container">
 							<div class="c-eyemeasurement__buttons">
 								<div class="c-button c-button--primary c-eyemeasurement__button">
-									<input type="submit" class="o-button-reset c-button__link c-button__link--initial-width" value="Opslaan" />
+									<button type="submit" class="o-button-reset c-button__link c-button__link--initial-width js-save">
+										<span class="js-save-text">Opslaan</span>
+										<svg class="hidden js-save-loading" version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background: new 0 0 50 50;" xml:space="preserve">
+											<path fill="#ffffff" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+												<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+											</path>
+										</svg>
+										<svg class="hidden js-save-done" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+											<path d="M0 0h24v24H0z" fill="none" />
+											<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+										</svg>
+									</button>
 								</div>
 								<div class="c-button c-button--secondary c-eyemeasurement__button">
 									<a class="c-button__link c-button__link--initial-width" href="./index.html">Annuleren</a>

@@ -138,33 +138,50 @@ const calculateAge = (dateString) => {
 			otherInputElements: inputElements,
 			formSubmitCallback: async function ({ inputValues }) {
 				const values = inputValues;
-				const data = {
-					data: {
-						Geslacht: values[1],
-						GeboorteDatum: values[0],
-						'Oogmetingen/Datum': todayString,
-						'Oogmetingen/Sfr ver': values[2],
-						'Oogmetingen/Cyl ver': values[3],
-						'Oogmetingen/As ver': values[4],
-						'Oogmetingen/Add': values[5],
-						'Oogmetingen/Sfr dicht': values[7],
-						'Oogmetingen/Cyl dicht': values[8],
-						'Oogmetingen/As dicht': values[9],
-						'Oogmetingen/Sfr ver/L': values[10],
-						'Oogmetingen/Cyl ver/L': values[11],
-						'Oogmetingen/As ver/L': values[12],
-						'Oogmetingen/Add/L': values[13],
-						'Oogmetingen/Sfr dicht/L': values[15],
-						'Oogmetingen/Cyl dicht/L': values[16],
-						'Oogmetingen/As dicht/L': values[17],
+				const data = `{
+					"data": {
+						"Geslacht": "${values[1]}",
+						"Geboortedatum": "${values[0]}",
+						"Oogmetingen/Datum": "${todayString}",
+						"Oogmetingen/Sfr ver": ${parseFloat(values[2])},
+						"Oogmetingen/Cyl ver": ${parseFloat(values[3])},
+						"Oogmetingen/As ver": ${parseFloat(values[4])},
+						"Oogmetingen/Add": ${parseFloat(values[5])},
+						"Oogmetingen/Sfr dicht": ${parseFloat(values[7])},
+						"Oogmetingen/Cyl dicht": ${parseFloat(values[8])},
+						"Oogmetingen/As dicht": ${parseFloat(values[9])},
+						"Oogmetingen/Sfr ver/L": ${parseFloat(values[10])},
+						"Oogmetingen/Cyl ver/L": ${parseFloat(values[11])},
+						"Oogmetingen/As ver/L": ${parseFloat(values[12])},
+						"Oogmetingen/Add/L": ${parseFloat(values[13])},
+						"Oogmetingen/Sfr dicht/L": ${parseFloat(values[15])},
+						"Oogmetingen/Cyl dicht/L": ${parseFloat(values[16])},
+						"Oogmetingen/As dicht/L": ${parseFloat(values[17])}
 					},
-					settings: {
-						years: calculateAge(values[0]),
-					},
-				};
+					"settings": {
+						"years": ${parseFloat(calculateAge(values[0]))}
+					}
+				}`;
 
-				const result = await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
-				console.log(result);
+				const saveElement = document.querySelector('.js-save');
+				const saveTextElement = document.querySelector('.js-save-text');
+				const saveLoadingElement = document.querySelector('.js-save-loading');
+				const saveDoneElement = document.querySelector('.js-save-done');
+				saveElement.disabled = true;
+				saveLoadingElement.classList.remove('hidden');
+				saveTextElement.classList.add('hidden');
+
+				// const result = await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
+				const result = await dataAccess.api.post('https://crmoptics.azurewebsites.net/api/v1/forecast', data);
+
+				if (result) {
+					saveLoadingElement.classList.add('hidden');
+					saveDoneElement.classList.remove('hidden');
+
+					setTimeout(() => {
+						location.replace('./index.html');
+					}, 1000);
+				}
 			},
 		});
 	});

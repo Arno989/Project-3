@@ -7,11 +7,10 @@ const api = (function () {
 		return fetch(endpoint, {
 			method: 'POST',
 			headers: {
-				Accept: 'application/json',
+				Accept: '*/*',
 				'Content-Type': 'application/json',
 			},
-			// mode: 'no-cors',
-			body: JSON.stringify(data),
+			body: data,
 		}).then((r) => r.json());
 	};
 
