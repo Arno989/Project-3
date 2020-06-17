@@ -12,10 +12,12 @@ import Charts from './lib/Charts';
 
 		navModule.setup(menuButtonElement, menuCloseButtonElement, menuElement);
 
-		const chartLoadingElements = document.querySelectorAll('.js-chart-loading');
+		const chartLoadingElement = document.querySelector('.js-chart-loading');
 		const chartElements = document.querySelectorAll('.js-chart');
 		const data = dataAccess.local.get('eyeMeasurementResult');
 		if (data) {
+			chartLoadingElement.classList.add('hidden');
+
 			const dataKeys = Object.keys(data);
 			const dataValues = Object.values(data);
 
@@ -34,7 +36,6 @@ import Charts from './lib/Charts';
 			}
 
 			new Charts({
-				loadingElement: chartLoadingElements[0],
 				chartElement: chartElements[0],
 				chartType: 'line',
 				chartLabels: Object.keys(dataValues[0]),
@@ -55,14 +56,13 @@ import Charts from './lib/Charts';
 			}
 
 			new Charts({
-				loadingElement: chartLoadingElements[1],
 				chartElement: chartElements[1],
 				chartType: 'line',
 				chartLabels: Object.keys(dataValues[0]),
 				dataSets: dataSetsSfr,
 			}).setup();
 		} else {
-			chartLoadingElements.forEach((element) => element.classList.add('hidden'));
+			chartLoadingElement.classList.add('hidden');
 			document.querySelector('.js-no-data-message').classList.remove('hidden');
 		}
 	});

@@ -1,10 +1,9 @@
 class Charts {
-	constructor({ loadingElement, chartElement, chartType, chartLabels, dataSets }) {
-		Object.assign(this, { loadingElement, chartElement, chartType, chartLabels, dataSets });
+	constructor({ chartElement, chartType, chartLabels, dataSets }) {
+		Object.assign(this, { chartElement, chartType, chartLabels, dataSets });
 	}
 
 	setup() {
-		this.loadingElement.classList.add('hidden');
 		this.chartElement.classList.remove('hidden');
 
 		const chartContext = this.chartElement.getContext('2d');
