@@ -9,8 +9,12 @@
 	color: map-get($colors-footer, 'text');
 	background-color: map-get($colors-footer, 'background');
 
-	@include size(large) {
-		padding: 24px 180px;
+	@include size(medium) {
+		padding: 24px 240px;
+	}
+
+	@include size(xlarge) {
+		padding: 24px 360px;
 	}
 
 	&__logo {
