@@ -5,4 +5,12 @@
 		display: flex;
 		justify-content: center;
 	}
+
+	&__no-data {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+
+		font-size: 1.15rem;
+	}
 }

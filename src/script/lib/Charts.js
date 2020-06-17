@@ -20,7 +20,7 @@ class Charts {
 					yAxes: [
 						{
 							ticks: {
-								beginAtZero: true,
+								beginAtZero: false,
 							},
 						},
 					],

@@ -12,36 +12,58 @@ import Charts from './lib/Charts';
 
 		navModule.setup(menuButtonElement, menuCloseButtonElement, menuElement);
 
+		const chartLoadingElements = document.querySelectorAll('.js-chart-loading');
+		const chartElements = document.querySelectorAll('.js-chart');
 		const data = dataAccess.local.get('eyeMeasurementResult');
-
-		const chartLoadingElement = document.querySelector('.js-chart-loading');
-
 		if (data) {
-			let dataSets = [];
 			const dataKeys = Object.keys(data);
 			const dataValues = Object.values(data);
-			const colors = ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'];
-			for (let i = 0; i < dataKeys.length; i++) {
+
+			const colors = ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'];
+			let dataSetsCyl = [];
+			for (let i = 0; i < 2; i++) {
 				const color = colors[i];
-				dataSets.push({
+				dataSetsCyl.push({
 					label: dataKeys[i],
 					data: Object.values(dataValues[i]),
-					backgroundColor: color,
+					backgroundColor: 'transparent',
 					borderColor: color,
 					borderWidth: 2,
+					pointRadius: 2,
 				});
 			}
 
 			new Charts({
-				loadingElement: chartLoadingElement,
-				chartElement: document.querySelector('.js-chart'),
+				loadingElement: chartLoadingElements[0],
+				chartElement: chartElements[0],
 				chartType: 'line',
-				chartLabel: 'Voorspelling',
 				chartLabels: Object.keys(dataValues[0]),
-				dataSets: dataSets,
+				dataSets: dataSetsCyl,
+			}).setup();
+
+			let dataSetsSfr = [];
+			for (let i = 2; i < 4; i++) {
+				const color = colors[i - 2];
+				dataSetsSfr.push({
+					label: dataKeys[i],
+					data: Object.values(dataValues[i]),
+					backgroundColor: 'transparent',
+					borderColor: color,
+					borderWidth: 2,
+					pointRadius: 2,
+				});
+			}
+
+			new Charts({
+				loadingElement: chartLoadingElements[1],
+				chartElement: chartElements[1],
+				chartType: 'line',
+				chartLabels: Object.keys(dataValues[0]),
+				dataSets: dataSetsSfr,
 			}).setup();
 		} else {
-			chartLoadingElement.innerHTML = '<p style="margin-bottom: 2rem; font-size: 1.15rem;">Data kan niet geladen worden, gelieve eerst een oogmeting te doen.</p>';
+			chartLoadingElements.forEach((element) => element.classList.add('hidden'));
+			document.querySelector('.js-no-data-message').classList.remove('hidden');
 		}
 	});
 })();

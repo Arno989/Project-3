@@ -176,6 +176,127 @@
 						</style>
 					</div>
 
+					<canvas class="c-chart hidden js-chart"></canvas>
+					<div class="c-chart-loading js-chart-loading">
+						<div class="c-loading-container">
+							<div class="c-loading">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+						<style type="text/css">
+							@keyframes loading {
+								0% {
+									opacity: 1;
+								}
+								100% {
+									opacity: 0;
+								}
+							}
+							.c-loading div {
+								left: 94px;
+								top: 48px;
+								position: absolute;
+								animation: loading linear 1s infinite;
+								background: #a74ea4;
+								width: 12px;
+								height: 24px;
+								border-radius: 6px / 12px;
+								transform-origin: 6px 52px;
+							}
+							.c-loading div:nth-child(1) {
+								transform: rotate(0deg);
+								animation-delay: -0.9166666666666666s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(2) {
+								transform: rotate(30deg);
+								animation-delay: -0.8333333333333334s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(3) {
+								transform: rotate(60deg);
+								animation-delay: -0.75s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(4) {
+								transform: rotate(90deg);
+								animation-delay: -0.6666666666666666s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(5) {
+								transform: rotate(120deg);
+								animation-delay: -0.5833333333333334s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(6) {
+								transform: rotate(150deg);
+								animation-delay: -0.5s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(7) {
+								transform: rotate(180deg);
+								animation-delay: -0.4166666666666667s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(8) {
+								transform: rotate(210deg);
+								animation-delay: -0.3333333333333333s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(9) {
+								transform: rotate(240deg);
+								animation-delay: -0.25s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(10) {
+								transform: rotate(270deg);
+								animation-delay: -0.16666666666666666s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(11) {
+								transform: rotate(300deg);
+								animation-delay: -0.08333333333333333s;
+								background: #a74ea4;
+							}
+							.c-loading div:nth-child(12) {
+								transform: rotate(330deg);
+								animation-delay: 0s;
+								background: #a74ea4;
+							}
+							.c-loading-container {
+								width: 200px;
+								height: 200px;
+								display: inline-block;
+								overflow: hidden;
+								background: #ffffff;
+							}
+							.c-loading {
+								width: 100%;
+								height: 100%;
+								position: relative;
+								transform: translateZ(0) scale(1);
+								backface-visibility: hidden;
+								transform-origin: 0 0;
+							}
+							.c-loading div {
+								box-sizing: content-box;
+							}
+						</style>
+					</div>
+
+					<p class="c-chart__no-data hidden js-no-data-message">Data kan niet geladen worden, gelieve eerst een oogmeting te doen.</p>
+
 					<div class="c-button c-button--primary">
 						<a class="c-button__link c-button__link--initial-width" href="./eyemeasurement.html"><span class="c-button__icon c-button__icon--left">&#43;</span>Nieuwe oogmeting</a>
 					</div>
