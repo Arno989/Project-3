@@ -171,8 +171,7 @@ const calculateAge = (dateString) => {
 				saveLoadingElement.classList.remove('hidden');
 				saveTextElement.classList.add('hidden');
 
-				// const result = await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
-				const result = await dataAccess.api.post('https://crmoptics.azurewebsites.net/api/v1/forecast', data);
+				const result = await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
 
 				if (result) {
 					saveLoadingElement.classList.add('hidden');
