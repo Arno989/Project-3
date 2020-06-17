@@ -174,6 +174,8 @@ const calculateAge = (dateString) => {
 				const result = await dataAccess.api.post('https://crm-optics-api.azurewebsites.net/api/v1/forecast', data);
 
 				if (result) {
+					dataAccess.local.set('eyeMeasurementResult', result);
+
 					saveLoadingElement.classList.add('hidden');
 					saveDoneElement.classList.remove('hidden');
 

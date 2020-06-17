@@ -1,6 +1,6 @@
 class Charts {
-	constructor({ loadingElement, chartElement, chartType, chartLabel, chartLabels, chartData, chartBackgroundColor, chartBorderColor, chartBorderWidth }) {
-		Object.assign(this, { loadingElement, chartElement, chartType, chartLabel, chartLabels, chartData, chartBackgroundColor, chartBorderColor, chartBorderWidth });
+	constructor({ loadingElement, chartElement, chartType, chartLabels, dataSets }) {
+		Object.assign(this, { loadingElement, chartElement, chartType, chartLabels, dataSets });
 	}
 
 	setup() {
@@ -13,15 +13,7 @@ class Charts {
 			type: this.chartType,
 			data: {
 				labels: this.chartLabels,
-				datasets: [
-					{
-						label: this.chartLabel,
-						data: this.chartData,
-						backgroundColor: this.chartBackgroundColor,
-						borderColor: this.chartBorderColor,
-						borderWidth: this.chartBorderWidth,
-					},
-				],
+				datasets: this.dataSets,
 			},
 			options: {
 				scales: {
