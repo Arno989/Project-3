@@ -35,13 +35,15 @@ const calculateAge = (dateString) => {
 		const todayString = `${today.getFullYear()}-${appendLeadingZero(today.getMonth() + 1)}-${appendLeadingZero(today.getDate())}`;
 		const dateOfBirthElement = document.querySelector('.js-dateOfBirth');
 		dateOfBirthElement.setAttribute('max', todayString);
+		const dateEyeMeasurementElement = document.querySelector('.js-date-eye-measurement');
+		dateEyeMeasurementElement.setAttribute('max', todayString);
 
 		const formElement = document.querySelector('.js-form');
 		const inputElements = document.querySelectorAll('.js-input');
 
-		const sfrVerLinks = inputElements[10];
-		const addLinks = inputElements[13];
-		const sfrDichtLinks = inputElements[15];
+		const sfrVerLinks = inputElements[11];
+		const addLinks = inputElements[14];
+		const sfrDichtLinks = inputElements[16];
 		const updateSfrDichtLinks = () => {
 			const addValue = parseFloat(addLinks.value);
 			if (addValue != 0) {
@@ -50,8 +52,8 @@ const calculateAge = (dateString) => {
 		};
 		sfrVerLinks.addEventListener('change', updateSfrDichtLinks);
 		addLinks.addEventListener('change', updateSfrDichtLinks);
-		const cylVerLinks = inputElements[11];
-		const cylDichtLinks = inputElements[16];
+		const cylVerLinks = inputElements[12];
+		const cylDichtLinks = inputElements[17];
 		const updateCyl = (cyl) => {
 			if (cyl === 0) {
 				cylDichtLinks.value = cylVerLinks.value;
@@ -61,8 +63,8 @@ const calculateAge = (dateString) => {
 		};
 		cylVerLinks.addEventListener('change', () => updateCyl(0));
 		cylDichtLinks.addEventListener('change', () => updateCyl(1));
-		const asVerLinks = inputElements[12];
-		const asDichtLinks = inputElements[17];
+		const asVerLinks = inputElements[13];
+		const asDichtLinks = inputElements[18];
 		const updateAsLinks = (as) => {
 			if (as === 0) {
 				asDichtLinks.value = asVerLinks.value;
@@ -73,9 +75,9 @@ const calculateAge = (dateString) => {
 		asVerLinks.addEventListener('change', () => updateAsLinks(0));
 		asDichtLinks.addEventListener('change', () => updateAsLinks(1));
 
-		const sfrVerRechts = inputElements[2];
-		const addRechts = inputElements[5];
-		const sfrDichtRechts = inputElements[7];
+		const sfrVerRechts = inputElements[3];
+		const addRechts = inputElements[6];
+		const sfrDichtRechts = inputElements[8];
 		const updateSfrDichtRechts = () => {
 			const addValue = parseFloat(addRechts.value);
 			if (addValue != 0) {
@@ -84,8 +86,8 @@ const calculateAge = (dateString) => {
 		};
 		sfrVerRechts.addEventListener('change', updateSfrDichtRechts);
 		addRechts.addEventListener('change', updateSfrDichtRechts);
-		const cylVerRechts = inputElements[3];
-		const cylDichtRechts = inputElements[8];
+		const cylVerRechts = inputElements[4];
+		const cylDichtRechts = inputElements[9];
 		const updateCylRechts = (cyl) => {
 			if (cyl === 0) {
 				cylDichtRechts.value = cylVerRechts.value;
@@ -95,8 +97,8 @@ const calculateAge = (dateString) => {
 		};
 		cylVerRechts.addEventListener('change', () => updateCylRechts(0));
 		cylDichtRechts.addEventListener('change', () => updateCylRechts(1));
-		const asVerRechts = inputElements[4];
-		const asDichtRechts = inputElements[9];
+		const asVerRechts = inputElements[5];
+		const asDichtRechts = inputElements[10];
 		const updateAsRechts = (as) => {
 			if (as === 0) {
 				asDichtRechts.value = asVerRechts.value;
@@ -138,28 +140,29 @@ const calculateAge = (dateString) => {
 			otherInputElements: inputElements,
 			formSubmitCallback: async function ({ inputValues }) {
 				const values = inputValues;
+
 				const data = `{
 					"data": {
-						"Geslacht": "${values[1]}",
-						"Geboortedatum": "${values[0]}",
-						"Oogmetingen/Datum": "${todayString}",
-						"Oogmetingen/Sfr ver": ${parseFloat(values[2])},
-						"Oogmetingen/Cyl ver": ${parseFloat(values[3])},
-						"Oogmetingen/As ver": ${parseFloat(values[4])},
-						"Oogmetingen/Add": ${parseFloat(values[5])},
-						"Oogmetingen/Sfr dicht": ${parseFloat(values[7])},
-						"Oogmetingen/Cyl dicht": ${parseFloat(values[8])},
-						"Oogmetingen/As dicht": ${parseFloat(values[9])},
-						"Oogmetingen/Sfr ver/L": ${parseFloat(values[10])},
-						"Oogmetingen/Cyl ver/L": ${parseFloat(values[11])},
-						"Oogmetingen/As ver/L": ${parseFloat(values[12])},
-						"Oogmetingen/Add/L": ${parseFloat(values[13])},
-						"Oogmetingen/Sfr dicht/L": ${parseFloat(values[15])},
-						"Oogmetingen/Cyl dicht/L": ${parseFloat(values[16])},
-						"Oogmetingen/As dicht/L": ${parseFloat(values[17])}
+						"Geslacht": "${values[2]}",
+						"Geboortedatum": "${values[1]}",
+						"Oogmetingen/Datum": "${values[0]}",
+						"Oogmetingen/Sfr ver": ${parseFloat(values[3])},
+						"Oogmetingen/Cyl ver": ${parseFloat(values[4])},
+						"Oogmetingen/As ver": ${parseFloat(values[5])},
+						"Oogmetingen/Add": ${parseFloat(values[6])},
+						"Oogmetingen/Sfr dicht": ${parseFloat(values[8])},
+						"Oogmetingen/Cyl dicht": ${parseFloat(values[9])},
+						"Oogmetingen/As dicht": ${parseFloat(values[10])},
+						"Oogmetingen/Sfr ver/L": ${parseFloat(values[11])},
+						"Oogmetingen/Cyl ver/L": ${parseFloat(values[12])},
+						"Oogmetingen/As ver/L": ${parseFloat(values[13])},
+						"Oogmetingen/Add/L": ${parseFloat(values[14])},
+						"Oogmetingen/Sfr dicht/L": ${parseFloat(values[16])},
+						"Oogmetingen/Cyl dicht/L": ${parseFloat(values[17])},
+						"Oogmetingen/As dicht/L": ${parseFloat(values[18])}
 					},
 					"settings": {
-						"years": ${parseFloat(calculateAge(values[0]))}
+						"years": ${parseFloat(calculateAge(values[1]))}
 					}
 				}`;
 
