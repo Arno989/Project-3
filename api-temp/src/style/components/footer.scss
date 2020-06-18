@@ -1,0 +1,23 @@
+.c-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px;
+
+	font-size: 0.86rem;
+
+	color: map-get($colors-footer, 'text');
+	background-color: map-get($colors-footer, 'background');
+
+	@include size(medium) {
+		padding: 24px 240px;
+	}
+
+	@include size(xlarge) {
+		padding: 24px 360px;
+	}
+
+	&__logo {
+		height: 24px;
+	}
+}

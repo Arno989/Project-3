@@ -1,0 +1,9 @@
+.c-trainings {
+	&-text {
+		margin-bottom: 36px;
+
+		@include size(large) {
+			margin-bottom: 48px;
+		}
+	}
+}
