@@ -81,8 +81,13 @@
 
 						<div class="c-eyemeasurement__person-details">
 							<div class="c-form-field c-eyemeasurement__form-field">
+								<label class="c-label" for="csv">Upload een CSV bestand</label>
+								<input class="js-csv" type="file" accept=".csv" name="Csv" id="csv" />
+							</div>
+
+							<div class="c-form-field c-eyemeasurement__form-field">
 								<label class="c-label" for="dateEyeMeasurement">Datum oogmeting</label>
-								<input class="c-input js-input js-date-eye-measurement" type="date" name="Geboortedatum" id="dateEyeMeasurement" required />
+								<input class="c-input js-input js-date-eye-measurement" type="date" name="DateEyeMeasurement" id="dateEyeMeasurement" required />
 							</div>
 
 							<div class="c-form-field c-eyemeasurement__form-field">
@@ -91,7 +96,7 @@
 							</div>
 
 							<div class="c-form-field c-eyemeasurement__form-field">
-								<select class="c-select js-input" name="Geslacht" id="gender" aria-label="Geslacht" required>
+								<select class="c-select js-input js-gender" name="Geslacht" id="gender" aria-label="Geslacht" required>
 									<option value="" disabled selected hidden>Geslacht</option>
 									<option value="Man">Man</option>
 									<option value="Vrouw">Vrouw</option>

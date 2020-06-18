@@ -135,6 +135,39 @@ const calculateAge = (dateString) => {
 			asDichtLinks.value = asDichtRechts.value;
 		});
 
+		const genderElement = document.querySelector('.js-gender');
+
+		const csvElement = document.querySelector('.js-csv');
+		csvElement.addEventListener('change', () => {
+			const reader = new FileReader();
+			reader.onload = () => {
+				let dataArray = reader.result.split(';');
+				for (let i = 3; i < dataArray.length; i++) {
+					dataArray[i] = dataArray[i].replace(',', '.');
+				}
+				console.log(dataArray);
+
+				genderElement.value = dataArray[0];
+				dateOfBirthElement.value = dataArray[1];
+				dateEyeMeasurementElement.value = dataArray[2];
+				sfrVerRechts.value = dataArray[3];
+				cylVerRechts.value = dataArray[4];
+				asVerRechts.value = dataArray[5];
+				addRechts.value = dataArray[6];
+				sfrDichtRechts.value = dataArray[7];
+				cylDichtRechts.value = dataArray[8];
+				asDichtRechts.value = dataArray[9];
+				sfrVerLinks.value = dataArray[10];
+				cylVerLinks.value = dataArray[11];
+				asVerLinks.value = dataArray[12];
+				addLinks.value = dataArray[13];
+				sfrDichtLinks.value = dataArray[14];
+				cylDichtLinks.value = dataArray[15];
+				asDichtLinks.value = dataArray[16];
+			};
+			reader.readAsBinaryString(csvElement.files[0]);
+		});
+
 		formModule.setup({
 			formElement: formElement,
 			otherInputElements: inputElements,
