@@ -1,0 +1,94 @@
+.c-button {
+	display: flex;
+	justify-content: center;
+
+	& + .c-form-field {
+		margin-top: 24px;
+	}
+
+	&__icon {
+		font-size: 2rem;
+		line-height: 0;
+
+		&--left {
+			margin-left: -0.5rem;
+			margin-right: 1rem;
+		}
+
+		&--right {
+			margin-left: 1rem;
+			margin-right: -0.5rem;
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: 3px 16px;
+		border: 1px solid map-get($colors-button, 'border');
+		border-radius: 8px;
+
+		font-size: 1.4rem;
+		font-weight: 600;
+		text-decoration: none;
+
+		color: map-get($colors-button, 'text');
+		background-color: map-get($colors-button, 'background');
+		box-shadow: map-get($shadows-button, 'primary');
+
+		cursor: pointer;
+
+		@include size(medium) {
+			padding: 6px 24px;
+		}
+
+		@include size(large) {
+			padding: 8px 32px;
+		}
+
+		&--initial-width {
+			width: initial !important;
+		}
+	}
+
+	&--primary {
+		@include size(large) {
+			width: 100%;
+		}
+
+		.c-button__link {
+			width: 100%;
+
+			border-color: map-get($colors-button, 'background');
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: map-get($colors-button, 'hover-primary');
+			}
+		}
+	}
+
+	&--secondary {
+		margin: 24px 0;
+
+		@include size(large) {
+			margin: 32px 0;
+		}
+
+		.c-button__link {
+			border: 1px solid map-get($colors-button, 'border-secondary');
+
+			color: map-get($colors-main, 'regular');
+			background-color: $color-background;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: map-get($colors-button, 'hover-secondary');
+			}
+		}
+	}
+}
