@@ -145,7 +145,6 @@ const calculateAge = (dateString) => {
 				for (let i = 3; i < dataArray.length; i++) {
 					dataArray[i] = dataArray[i].replace(',', '.');
 				}
-				console.log(dataArray);
 
 				genderElement.value = dataArray[0];
 				dateOfBirthElement.value = dataArray[1];
