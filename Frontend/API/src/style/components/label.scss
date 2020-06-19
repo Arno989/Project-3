@@ -1,4 +1,7 @@
 .c-label {
+	display: flex;
+	align-items: center;
+
 	font-size: 1.15rem;
 
 	color: map-get($colors-form, 'label-text');
@@ -15,6 +18,10 @@
 		will-change: top, padding, font-size, color, transform;
 		transition: top 100ms ease-out, font-size 100ms ease-out, color 50ms ease-out, transform 100ms ease-out;
 		cursor: text;
+	}
+
+	&__icon {
+		padding-right: 0.5rem;
 	}
 }
 

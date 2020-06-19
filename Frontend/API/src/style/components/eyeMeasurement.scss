@@ -36,17 +36,21 @@
 		& + & {
 			margin-left: 1rem;
 		}
+
+		&--small {
+			justify-content: flex-start;
+
+			&-link {
+				margin-bottom: 1.5rem;
+				padding: 0.5rem 1rem;
+
+				font-size: 1rem;
+			}
+		}
 	}
 
-	&__copy {
-		justify-content: flex-start;
-
-		&-link {
-			margin-bottom: 1.5rem;
-			padding: 0.5rem 1rem;
-
-			font-size: 1rem;
-		}
+	&__upload &__button--small-link {
+		margin-bottom: 0;
 	}
 
 	@include size(medium) {
@@ -58,10 +62,10 @@
 			}
 
 			div {
-				width: 50%;
+				width: 60%;
 
 				@include size(large) {
-					width: 65%;
+					width: 75%;
 				}
 			}
 		}
