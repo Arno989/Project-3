@@ -194,7 +194,7 @@ const calculateAge = (dateString) => {
 						"Oogmetingen/As dicht/L": ${parseFloat(values[18])}
 					},
 					"settings": {
-						"years": ${parseFloat(calculateAge(values[1]))}
+						"years": 20
 					}
 				}`;
 
