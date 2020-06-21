@@ -1,0 +1,44 @@
+.c-select {
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid map-get($colors-form, 'border');
+	outline: none;
+
+	font-size: 1.15rem;
+
+	color: map-get($colors-form, 'input-text');
+	background-color: map-get($colors-form, 'background');
+	background-image: linear-gradient(45deg, transparent 50%, map-get($colors-form, 'select-arrow') 50%), linear-gradient(135deg, map-get($colors-form, 'select-arrow') 50%, transparent 50%);
+	background-position: calc(100% - 20px) calc(1rem + 2px), calc(100% - 15px) calc(1rem + 2px), 100% 0;
+	background-size: 5px 5px, 5px 5px, 2.5rem 2.5rem;
+	background-repeat: no-repeat;
+
+	transition: 100ms border ease-in-out;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+
+	@include size(small) {
+		padding: 12px;
+	}
+
+	&:hover {
+		border-color: map-get($colors-form, 'input-hover-border');
+	}
+
+	&:focus,
+	&:active {
+		border-color: map-get($colors-form, 'input-focus-border');
+
+		background-image: linear-gradient(45deg, map-get($colors-form, 'select-arrow') 50%, transparent 50%), linear-gradient(135deg, transparent 50%, map-get($colors-form, 'select-arrow') 50%), linear-gradient(to right, transparent, transparent);
+		background-position: calc(100% - 15px) 1rem, calc(100% - 20px) 1rem, 100% 0;
+
+		box-shadow: 0 0 0 1px map-get($colors-form, 'input-focus-border');
+	}
+
+	&__option {
+		cursor: pointer;
+	}
+}
