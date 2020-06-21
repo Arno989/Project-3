@@ -1,0 +1,26 @@
+table,
+th,
+td {
+	border: 1px solid #707070;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 8px;
+
+	@include size(small) {
+		padding: 12px;
+	}
+
+	@include size(medium) {
+		padding: 16px;
+	}
+}
+
+th {
+	font-weight: initial;
+	text-align: left;
+
+	color: #212121;
+}
