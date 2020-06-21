@@ -1,0 +1,43 @@
+.c-label {
+	display: flex;
+	align-items: center;
+
+	font-size: 1.15rem;
+
+	color: map-get($colors-form, 'label-text');
+
+	&--floating {
+		position: absolute;
+		top: 11px;
+		left: 16px;
+
+		padding: 1px 4px;
+
+		background-color: map-get($colors-form, 'background');
+
+		will-change: top, padding, font-size, color, transform;
+		transition: top 100ms ease-out, font-size 100ms ease-out, color 50ms ease-out, transform 100ms ease-out;
+		cursor: text;
+	}
+
+	&__icon {
+		padding-right: 0.5rem;
+	}
+}
+
+.js-keep-floating,
+.c-form-field:focus-within .c-label--floating {
+	top: 14px;
+
+	padding: 1px 6px;
+
+	font-size: 0.9rem;
+
+	color: map-get($colors-main, 'regular');
+
+	transform: translateY(-32px);
+}
+
+.js-keep-floating {
+	color: initial;
+}

@@ -8,7 +8,10 @@ app = Flask(__name__)
 endpoint = '/api/v1'
 
 def process_request(content):
+    content = {k.lower(): v for k, v in content.items()}
+    print(content)
     settings = content.get("settings", {})
+    settings = {k.lower(): v for k, v in settings.items()}
     years = settings.get("years", 15)
     content = content.get("data")
     data = PrepJson.prep_json(content)
